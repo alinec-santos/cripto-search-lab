@@ -1,29 +1,43 @@
-# README - Trabalhos de Projeto e Análise de Algoritmos
-## Trabalho 1: Escape do Labirinto com Backtracking
-Objetivo: Implementar um algoritmo de backtracking para encontrar a saída de um labirinto.  
-Descrição: O trabalho consiste em projetar um algoritmo que permita a um prisioneiro escapar de um labirinto, utilizando um drone para mapear o espaço e um arquivo texto como entrada. O algoritmo deve ser capaz de lidar com chaves e portas, permitindo que o prisioneiro utilize as chaves para abrir portas e encontrar a saída.  
-Requisitos: Linguagem de programação C, Compilador GCC.  
-Compilação e Execução: Para compilar o código, execute:  
-**make all**  
-Para executar o programa, use:  
-**./programa**  
-Para mais informações, consulte a **Documentação do Trabalho 1**.
+# Criptografia-Casamento-Padroes
 
-## Trabalho 2: Caminho Mínimo em Cavernas com Programação Dinâmica
-Objetivo: Implementar um algoritmo de programação dinâmica para encontrar o caminho que maximiza os pontos de vida em uma caverna.  
-Descrição: O trabalho envolve a implementação de um algoritmo que calcula o caminho mais seguro para um prisioneiro escapar de uma caverna, considerando a presença de monstros e poções que afetam os pontos de vida. O algoritmo deve ser capaz de lidar com diferentes entradas e determinar se a saída é possível.
-  Requisitos: Linguagem de programação C, Compilador GCC.
-Compilação e Execução: Para compilar o código, execute:  
-**make <nome_arquivo.txt>**  
-Para mais informações, consulte a **Documentação do Trabalho 2**.
+Este projeto foi desenvolvido como Trabalho Pratico 3 da disciplina de Projeto e Analise de Algoritmos na Universidade Federal de Vicosa (UFV) - Campus Florestal. O programa implementa solucoes para dois problemas: casamento exato de padroes em textos e criptografia baseada em cifra de deslocamento.
 
-## Trabalho 3: Análise de Algoritmos de Criptografia e Busca por Padrão
+## 1. Funcionalidades
 
-Objetivo: Implementar algoritmos de criptografia e análise de padrões em cadeias de caracteres.  
-Descrição: O trabalho consiste em implementar dois algoritmos distintos: um para a cifra de deslocamento (criptografia) e outro para o casamento de padrões em textos. O primeiro algoritmo deve permitir a criptografia e descriptografia de arquivos, enquanto o segundo deve buscar padrões em um texto fornecido.
-  Requisitos: Linguagem de programação C, Compilador GCC.
-Compilação e Execução: Para compilar o código, execute:    
-**make all**  
-Para executar o programa, use:  
-**./programa**  
-Para mais informações, consulte a **Documentação do Trabalho 3**.
+### Tarefa A - Casamento de Padroes
+Implementacao de dois algoritmos para busca exata de padroes em arquivos texto:
+- **Shift-And**: Algoritmo bit a bit para padroes curtos (ate 32 caracteres)
+- **KMP (Knuth-Morris-Pratt)**: Algoritmo classico com pre-processamento do padrao
+
+Funcionalidades:
+- Buscar padrao em arquivo texto
+- Medicao do tempo de execucao em nanossegundos
+- Comparacao de desempenho entre os algoritmos
+
+### Tarefa B - Criptografia (Cifra de Deslocamento)
+Operacoes de criptografia e descriptografia baseadas em deslocamento de caracteres:
+
+- **Criptografar arquivo**: Desloca caracteres usando chave fornecida
+- **Descriptografar arquivo**: Restaura conteudo original com a mesma chave
+- **Criptografar com chave aleatoria**: Gera chave aleatoria para criptografia
+- **Analise de frequencia**: Calcula frequencia percentual de caracteres
+- **Adivinhar chave**: Tenta deduzir a chave usada por analise de frequencia (baseado na lingua portuguesa)
+
+## 2. Ferramentas e Tecnologias
+
+- **Linguagem:** C
+- **Compilador:** GCC
+- **Medicao de tempo:**
+  - `clock_gettime()` (Linux/macOS) - precisao nanossegundos
+  - `QueryPerformanceCounter()` (Windows) - alta resolucao
+- **Estruturas:** Mascaras de bits, vetores, alocacao dinamica
+
+## 3. Compilacao e Execucao
+
+### Compilar:
+```bash
+make
+```
+### Executar:
+```bash
+./programa
